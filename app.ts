@@ -28,7 +28,6 @@ function onConnected(socket: any) {
   });
 
   socket.on("message", (data: any) => {
-    // console.log(data)
     socket.broadcast.emit("chat-message", data);
   });
 
