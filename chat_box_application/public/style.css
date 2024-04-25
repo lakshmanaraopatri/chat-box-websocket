@@ -6,7 +6,12 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
+.image {
+  display: flex;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
 body {
   font-family: "Open Sans", sans-serif;
   /* display: flex;
