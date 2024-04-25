@@ -8,7 +8,7 @@ const server = app.listen(port, () =>
 );
 
 const io = new Server(server);
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.resolve("./public")));
 // app.set("views", path.join(__dirname, "public"));
 // app.set("view engine", "ejs");
 // app.get("/",(req,res)=>{
@@ -35,3 +35,6 @@ function onConnected(socket: any) {
     socket.broadcast.emit("feedback", data);
   });
 }
+app.get("/", (req, res) => {
+  res.sendFile("/public/index.html");
+});
